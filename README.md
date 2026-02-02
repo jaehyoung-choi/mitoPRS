@@ -5,7 +5,7 @@ The provided files compute calculate mitoPRS for psychiatric disorders.
 
 Currently supported: Bipolar Disorder, Schizophrenia
 
-The current version contains computation of mitoPRS (genetic risk score for disorder based on single-nucleotide variations attributable to mitochondrially-acting protein coding genes) using:
+The current version contains computation of ***mitoPRS*** (*genetic risk score for disorder based on single-nucleotide variations attributable to mitochondrially-acting protein coding genes*) using:
 - PRSice-2
 - PRS-CSx (auto, EUR reference)
 - XGBoost
