@@ -14,6 +14,8 @@ The current version contains computation of mitoPRS (genetic risk score for diso
 
 The mitoPRS pipeline estimates ancestry-related principal components using 1000 Genome Project (P3) as reference panel, using variants included in the Human Genome Diversity Project which are confidently genotyped within the discovery set from Psychiatric Genomics Consortium. The pipeline extracts genetic variations located within extended regions of MitoCarta 3.0, performs auto-thresholding based on pre-computed summary statistics, to calculate the mitoPRS using 5 different algorithms.
 
+The majority of the development/discovery data is dependent on individuals of European Superpopulation Ancestry
+
 ### References
 - FRAPOSA (https://github.com/PGScatalog/fraposa_pgsc)
 - MitoCarta 3.0 (https://www.broadinstitute.org/mitocarta/mitocarta30-inventory-mammalian-mitochondrial-proteins-and-pathways)
