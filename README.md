@@ -21,7 +21,7 @@ _The majority of the development/discovery data is dependent on individuals of E
 - MitoCarta 3.0 (https://www.broadinstitute.org/mitocarta/mitocarta30-inventory-mammalian-mitochondrial-proteins-and-pathways)
 - Psychiatric Genomics Consortium (https://pgc.unc.edu/)
 
-Reference: ***Choi et al. (In preparation)***
+Reference: ***Choi et al. (In preparation; https://hdl.handle.net/21.11116/0000-0012-040E-9)***
 
 ## Requirements
 ### Data
