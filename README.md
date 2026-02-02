@@ -2,6 +2,7 @@
 **Pipeline for calculation of mitoPRS for psychiatric disorders.**
 ## Description
 The provided files compute calculate mitoPRS for psychiatric disorder.
+
 Currently supported: Bipolar Disorder, Schizophrenia
 
 The current version contains computation of mitoPRS (genetic risk score for disorder based on single-nucleotide variations attributable to mitochondrially-acting protein-coding genes) using:
@@ -23,9 +24,12 @@ Reference: Choi et al. (In preparation)
 ## Requirements
 ### Data
 Input Data (Target): Plink binary files on GRCh37/hg19 coordinates.
+
 Reference: datalink
+
 ### Preinstallation Software
 PLINK 2.0 (https://www.cog-genomics.org/plink/2.0/)
+
 Python >= 3.8.3
 
 ## Outline
