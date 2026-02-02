@@ -1,7 +1,7 @@
 # mitoPRS
 **Pipeline for calculation of mitoPRS for psychiatric disorders.**
 ## Description
-The provided files compute calculate mitoPRS for psychiatric disorder.
+The provided files compute calculate mitoPRS for psychiatric disorders.
 
 Currently supported: Bipolar Disorder, Schizophrenia
 
