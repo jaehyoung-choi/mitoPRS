@@ -40,6 +40,6 @@ Python >= 3.8.3
 ## Usage
 
 ## Discovery Data
-Psychiatric Genomics Consortium
+Individual-level datasets from Psychiatric Genomics Consortium
 - Bipolar Disorder Working Group (wave3)
 - Schizophrenia Disorder Working Group (wave2)
