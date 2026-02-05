@@ -38,8 +38,8 @@ Python >= 3.8.3
 
 
 ## Usage
-
+```./score_mitoPRS _targetprefix_ _outdir_ ```
 ## Discovery Data
 Individual-level datasets from Psychiatric Genomics Consortium
 - Bipolar Disorder Working Group (wave3)
-- Schizophrenia Disorder Working Group (wave2)
+- Schizophrenia Disorder Working Group (wave3)
