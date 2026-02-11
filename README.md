@@ -36,9 +36,18 @@ PLINK 2.0 (https://www.cog-genomics.org/plink/2.0/)
 
 Python >= 3.11.3
 
-## Outline
+## Outline & Usage
 1. Download Reference Files (1000Genomes, and relevant variants for Principal Components based on Human Genome Diversity Project) from here: ```https://www.dropbox.com/scl/fo/xdecc3pthm1q129bc2rgm/AGJcVMJyxsVqtKwoXFMUmb4?rlkey=7m11qxftru8hq1k2dbdeunhok&st=yxehuuxc&dl=0```
-2. 
+
+2. Move the downloaded reference files to /mitoPRS/ref/ folder
+   
+3. Run PCA Projection
+
+```./project_pcs.sh "targetprefix" ```
+
+4. Run MitoPRS Score
+
+```./score_mitoPRS.sh "targetprefix" "outprefix" ```
 
 ## Usage
 ```./score_mitoPRS _targetprefix_ _outdir_ ```
