@@ -65,6 +65,21 @@ export PATH="$PATH:/home/plink1.9:/home/plink2"
 
 ```./score_mitoPRS.sh "targetprefix" "outprefix" ```
 
+## Output
+A .csv file containing the following:
+- IID
+- FID
+- Within-family ID of Father
+- Within-family ID of Mother
+- Sex code (1 = male, 2 = female, 0 = Unknown)
+- Phenotype Value (1 = Control, 2 = Case, -9/0 = Missing)
+- BD_mitoPRS_prsice2 (Score output from PRS-ice2; un-normalized)
+- BD_mitoPRS_prscsx (Score output from plink --score; un-normalized)
+- BD_mitoPRS_enet (Predicted probability [0, 1])
+- BD_mitoPRS_xgb (Predicted probability [0, 1])
+- BD_mitoPRS_null (Predicted probability based on Covariate-only Logistic Regression Model)
+- First 5 PCs projected based on FRAPOSA-OADP
+
 ## Usage
 ```./score_mitoPRS _targetprefix_ _outdir_ ```
 ## Discovery Data
