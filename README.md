@@ -42,10 +42,13 @@ PLINK 2.0 (https://www.cog-genomics.org/plink/2.0/)
 PLINK 1.90b (https://www.cog-genomics.org/plink/)
 
 Python >= 3.11.3 (Lower versions have not been tested)
+> Make sure python is executable as "python"
 
 R >= 3.4.3
+> Make sure RScript is executable as "Rscript" 
 
 PRSice2 (https://github.com/choishingwan/PRSice?tab=readme-ov-file)
+> Make sure PRSice2_linux.R is in the directory "/mitoPRS/PRSice/"
 
 ## Outline & Usage
 1. Download Reference Files (1000Genomes, and relevant variants for Principal Components based on Human Genome Diversity Project) from here: ```https://www.dropbox.com/scl/fo/xdecc3pthm1q129bc2rgm/AGJcVMJyxsVqtKwoXFMUmb4?rlkey=7m11qxftru8hq1k2dbdeunhok&st=yxehuuxc&dl=0``` --> Move the reference files to /mitoPRS/ref/ Folder
@@ -57,13 +60,9 @@ E.g.
 export PATH="$PATH:/home/plink1.9:/home/plink2"
 ```
    
-3. Run PCA Projection
+3. Run MitoPRS Score
 
-```./project_pcs.sh "targetprefix" ```
-
-4. Run MitoPRS Score
-
-```./score_mitoPRS.sh "targetprefix" "outprefix" ```
+```./score_mitoPRS.sh "targetprefix"```
 
 ## Output
 A .csv file containing the following:
@@ -81,7 +80,7 @@ A .csv file containing the following:
 - First 5 PCs projected based on FRAPOSA-OADP
 
 ## Usage
-```./score_mitoPRS _targetprefix_ _outdir_ ```
+```./score_mitoPRS "targetprefix"```
 ## Discovery Data
 Individual-level datasets from Psychiatric Genomics Consortium
 - Bipolar Disorder Working Group (wave3)
