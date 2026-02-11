@@ -37,9 +37,9 @@ PLINK 2.0 (https://www.cog-genomics.org/plink/2.0/)
 Python >= 3.11.3
 
 ## Outline & Usage
-1. Download Reference Files (1000Genomes, and relevant variants for Principal Components based on Human Genome Diversity Project) from here: ```https://www.dropbox.com/scl/fo/xdecc3pthm1q129bc2rgm/AGJcVMJyxsVqtKwoXFMUmb4?rlkey=7m11qxftru8hq1k2dbdeunhok&st=yxehuuxc&dl=0```
+1. Download Reference Files (1000Genomes, and relevant variants for Principal Components based on Human Genome Diversity Project) from here: ```https://www.dropbox.com/scl/fo/xdecc3pthm1q129bc2rgm/AGJcVMJyxsVqtKwoXFMUmb4?rlkey=7m11qxftru8hq1k2dbdeunhok&st=yxehuuxc&dl=0``` --> Move the reference files to /mitoPRS/ref/ Folder
 
-2. Move the downloaded reference files to /mitoPRS/ref/ folder
+2. Set the Environmental Variables to PLINK paths in bash script (.sh) files
    
 3. Run PCA Projection
 
