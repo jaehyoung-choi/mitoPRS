@@ -25,21 +25,36 @@ Reference: ***Choi et al. (Abstract: https://doi.org/10.1016/j.euroneuro.2024.08
 
 ## Requirements
 ### Data
-Input Data (Target): Plink binary files on GRCh37/hg19 coordinates.
+Input Data (Target): Plink binary files on ***GRCh37/hg19*** coordinates.
 
-Reference 1: 1KG Reference For PC-projection
+> Current version supports "rsids" and/or "CHR:POS" format. Ref and Alt Allele formats are saved in files within /mitoPRS/ref/ directory)
 
-Reference 2: Reference for MitoPRS calculation
+Reference 1: 1KG Reference For PC-projection (Download from below)
+
+Reference 2: References for MitoPRS calculation (Available in /mitoPRS/ref/ in various formats)
+
+Key Requirements for are saved in ```requirements.txt```
 
 ### Preinstallation Software
 PLINK 2.0 (https://www.cog-genomics.org/plink/2.0/)
 
-Python >= 3.11.3
+PLINK 1.90b (https://www.cog-genomics.org/plink/)
+
+Python >= 3.11.3 (Lower versions have not been tested)
+
+R >= 3.4.3
+
+PRSice2 (https://github.com/choishingwan/PRSice?tab=readme-ov-file)
 
 ## Outline & Usage
 1. Download Reference Files (1000Genomes, and relevant variants for Principal Components based on Human Genome Diversity Project) from here: ```https://www.dropbox.com/scl/fo/xdecc3pthm1q129bc2rgm/AGJcVMJyxsVqtKwoXFMUmb4?rlkey=7m11qxftru8hq1k2dbdeunhok&st=yxehuuxc&dl=0``` --> Move the reference files to /mitoPRS/ref/ Folder
 
-2. Set the Environmental Variables to PLINK paths in bash script (.sh) files
+2. Set the PLINK executable paths in bash script (.sh) files.
+
+E.g.
+```
+export PATH="$PATH:/home/plink1.9:/home/plink2"
+```
    
 3. Run PCA Projection
 
