@@ -12,7 +12,7 @@ The current version contains computation of ***mitoPRS*** (*genetic risk score f
 - Elastic Net Regression (L1L2 Regularized Regression)
 - Convolutional Neural Network
 
-The mitoPRS pipeline estimates ancestry-related principal components using 1000 Genome Project (phase3; GRChr37) as reference panel, using variants included in the Human Genome Diversity Project which are confidently genotyped within the discovery set from Psychiatric Genomics Consortium. The pipeline extracts genetic variations located within extended regions of MitoCarta 3.0, performs auto-thresholding based on pre-computed summary statistics, to calculate the mitoPRS using 5 different algorithms.
+The mitoPRS pipeline estimates ancestry-related principal components using 1000 Genome Project (phase3; GRChr37) as reference panel, using variants included in the Human Genome Diversity Project which are confidently genotyped within the discovery set from Psychiatric Genomics Consortium Core Datasets. The pipeline extracts genetic variations located within extended coding regions of MitoCarta 3.0, performs auto-thresholding based on pre-computed summary statistics, to calculate the mitoPRS using 5 different algorithms.
 
 _Note: The majority of the development/discovery data is dependent on individuals of EUR-like Superpopulation Ancestry_
 
