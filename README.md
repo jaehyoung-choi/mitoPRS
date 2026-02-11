@@ -14,7 +14,7 @@ The current version contains computation of ***mitoPRS*** (*genetic risk score f
 
 The mitoPRS pipeline estimates ancestry-related principal components using 1000 Genome Project (phase3; GRChr37) as reference panel, using variants included in the Human Genome Diversity Project which are confidently genotyped within the discovery set from Psychiatric Genomics Consortium. The pipeline extracts genetic variations located within extended regions of MitoCarta 3.0, performs auto-thresholding based on pre-computed summary statistics, to calculate the mitoPRS using 5 different algorithms.
 
-_The majority of the development/discovery data is dependent on individuals of European Superpopulation Ancestry_
+_Note: The majority of the development/discovery data is dependent on individuals of EUR-like Superpopulation Ancestry_
 
 ### References
 - FRAPOSA (https://github.com/PGScatalog/fraposa_pgsc)
@@ -27,10 +27,13 @@ Reference: ***Choi et al. (Abstract: https://doi.org/10.1016/j.euroneuro.2024.08
 ### Data
 Input Data (Target): Plink binary files on GRCh37/hg19 coordinates.
 
-Reference: datalink
+Reference 1: 1KG Reference For PC-projection
+
+Reference 2: Reference for MitoPRS calculation
 
 ### Preinstallation Software
 PLINK 2.0 (https://www.cog-genomics.org/plink/2.0/)
+
 Python >= 3.11.3
 
 ## Outline
