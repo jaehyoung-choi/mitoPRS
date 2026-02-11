@@ -26,6 +26,7 @@ Reference: ***Choi et al. (Abstract: https://doi.org/10.1016/j.euroneuro.2024.08
 ## Requirements
 ### Data
 Input Data (Target): Plink binary files on ***GRCh37/hg19*** coordinates.
+"TargetPrefix" refers to the file prefix of the plink binary files (E.g. *targetprefix*.{bim, bed, fam})
 
 > Current version supports "rsids" and/or "CHR:POS" format. Ref and Alt Allele formats are saved in files within /mitoPRS/ref/ directory)
 
