@@ -35,7 +35,13 @@ Reference 1: 1KG Reference For PC-projection (Download from below)
 
 Reference 2: References for MitoPRS calculation (Available in /mitoPRS/ref/ in various formats)
 
+### VENV setting (tested)
 Key Requirements for are saved in ```mitoprs_requirements.txt```
+
+> ```git clone https://github.com/jaehyoung-choi/mitoPRS.git```
+> ```conda create -n mitoprs python=3.11.3```
+> ```conda activate mitoprs```
+> ```conda install --file mitoprs_requirements.txt```
 
 ### Preinstallation Software
 PLINK 2.0 (https://www.cog-genomics.org/plink/2.0/)
