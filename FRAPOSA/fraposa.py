@@ -1,7 +1,7 @@
 ## Cloned from PGS-Catalog Github (https://github.com/PGScatalog/pgsc_calc), Adapted from FRAPOSA (Original Github: https://github.com/daviddaiweizhang/fraposa)
 ## FRAPOSA: Fast and Robust Ancestry Prediction by Online singular value decomposition and Shrinkage Adjustment
 ## Original Author: David (Daiwei) Zhang
-## Modifications: Samuel Lambert
+## Modifications: Samuel Lambert, Minor Modifications from JC
 
 import matplotlib
 import numpy as np
