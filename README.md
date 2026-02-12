@@ -34,7 +34,7 @@ Reference 1: 1KG Reference For PC-projection (Download from below)
 
 Reference 2: References for MitoPRS calculation (Available in /mitoPRS/ref/ in various formats)
 
-Key Requirements for are saved in ```requirements.txt```
+Key Requirements for are saved in ```mitoprs_requirements.txt```
 
 ### Preinstallation Software
 PLINK 2.0 (https://www.cog-genomics.org/plink/2.0/)
