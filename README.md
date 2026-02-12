@@ -63,7 +63,10 @@ PRSice2 (https://github.com/choishingwan/PRSice?tab=readme-ov-file)
 > Make sure PRSice2_linux.R is in the directory "/mitoPRS/PRSice/"
 
 ## Outline & Usage
-1. Download Reference Files (1000Genomes, and relevant variants for Principal Components based on Human Genome Diversity Project) from here: ```https://www.dropbox.com/scl/fo/xdecc3pthm1q129bc2rgm/AGJcVMJyxsVqtKwoXFMUmb4?rlkey=7m11qxftru8hq1k2dbdeunhok&st=yxehuuxc&dl=0``` --> Move the reference files to /mitoPRS/ref/ Folder
+1. Download Reference Files (1000Genomes, and relevant variants for Principal Components based on Human Genome Diversity Project) from here: 
+
+> ```https://www.dropbox.com/scl/fo/xdecc3pthm1q129bc2rgm/AGJcVMJyxsVqtKwoXFMUmb4?rlkey=7m11qxftru8hq1k2dbdeunhok&st=yxehuuxc&dl=0``` 
+>> Move the reference files to /mitoPRS/ref/ Folder
 
 2. Set the PLINK executable paths in bash script (.sh) files.
 
