@@ -36,6 +36,8 @@ Reference 1: 1KG Reference For PC-projection (Download from below)
 Reference 2: References for MitoPRS calculation (Available in /mitoPRS/ref/ in various formats)
 
 ### VENV setting (tested)
+Tested OS: Redhat Enterprise Linux Release 9.6 (Plow) and Ubuntu 24.04 LTS (Noble Numbat)
+
 Key Requirements for are saved in ```mitoprs_requirements.txt```
 
 > ```git clone https://github.com/jaehyoung-choi/mitoPRS.git```
