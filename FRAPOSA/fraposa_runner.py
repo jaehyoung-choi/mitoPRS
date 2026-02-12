@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 import csv
 
-import fraposa as fp
+import .fraposa as fp
 import argparse
 
 
