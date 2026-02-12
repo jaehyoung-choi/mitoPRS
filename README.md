@@ -2,15 +2,16 @@
 **Pipeline for calculation of mitoPRS for psychiatric disorders.**
 ## Description
 The provided files compute calculate mitoPRS for psychiatric disorders.
+Beta Version (Feb 2026)
 
-Currently supported: Bipolar Disorder, Schizophrenia
+Currently supported: Bipolar Disorder; ~~Schizophrenia~~ (updating soon)
 
 The current version contains computation of ***mitoPRS*** (*genetic risk score for disorder based on single-nucleotide variations attributable to mitochondrially-acting protein coding genes*) using:
 - PRSice-2
 - PRS-CSx (auto, EUR reference)
 - XGBoost
 - Elastic Net Regression (L1L2 Regularized Regression)
-- Convolutional Neural Network
+- ~~Convolutional Neural Network~~ (updating soon)
 
 The mitoPRS pipeline estimates ancestry-related principal components using 1000 Genome Project (phase3; GRChr37) as reference panel, using variants included in the Human Genome Diversity Project which are confidently genotyped within the discovery set from Psychiatric Genomics Consortium Core Datasets. The pipeline extracts genetic variations located within extended coding regions of MitoCarta 3.0, performs auto-thresholding based on pre-computed summary statistics, to calculate the mitoPRS using 5 different algorithms.
 
@@ -80,7 +81,7 @@ A .csv file containing the following:
 - First 5 PCs projected based on FRAPOSA-OADP
 
 ## Usage
-```./score_mitoPRS "targetprefix"```
+```./score_mitoPRS "targetprefix" "outprefix"```
 ## Discovery Data
 Individual-level datasets from Psychiatric Genomics Consortium
 - Bipolar Disorder Working Group (wave3)
