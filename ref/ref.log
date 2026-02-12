@@ -1,1 +1,6 @@
 Logging Addition of Reference Files
+
+1kgref.bip.bim -> List of variant which were both included in Human Genome Diversity Project, and were confidently genotyped within PGC-bipw3 core dataset
+BD.mitoPRS.sumstat.postCT -> Sumstat base file for BD-mitoPRS after LD-pruning
+PRSCSx.bip.combined.txt -> Sumstat base file for BD-mitoPRS after PRS-CSx-auto EUR-LD permutation
+combinedbdset.bim -> Variant reference file for included variants for purpose of variant naming and strand-flipping
