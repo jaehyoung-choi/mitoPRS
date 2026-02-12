@@ -9,7 +9,7 @@ import pandas as pd
 from pyplink import PyPlink
 from sklearn.neighbors import KNeighborsClassifier
 
-from variants import MatchType, Variants
+from .variants import MatchType, Variants
 
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
