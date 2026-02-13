@@ -77,7 +77,7 @@ export PATH="$PATH:/home/plink1.9:/home/plink2"
 > Make changes to the script directly, or it may work if you have already set your path in .bashrc to ./plink and ./plink2.
 3. Run MitoPRS Score
 
-```./score_mitoPRS.sh "targetprefix" "outprefix```
+```./score_mitoPRS.sh "targetprefix" "outprefix"```
 
 ## Output
 A .csv file containing the following:
