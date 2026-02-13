@@ -21,8 +21,10 @@ _Note: The majority of the development/discovery data is dependent on individual
 - FRAPOSA (https://github.com/PGScatalog/fraposa_pgsc)
 - MitoCarta 3.0 (https://www.broadinstitute.org/mitocarta/mitocarta30-inventory-mammalian-mitochondrial-proteins-and-pathways)
 - Psychiatric Genomics Consortium (https://pgc.unc.edu/)
+- PRSice-2 (https://doi.org/10.1093/gigascience/giz082)
+- PRS-CSx (https://doi.org/10.1038/s41588-022-01054-7)
 
-Reference: ***Choi et al. (Abstract: https://doi.org/10.1016/j.euroneuro.2024.08.316; publication in preparation)***
+**Reference to current work**: ***Choi et al. (Abstract: https://doi.org/10.1016/j.euroneuro.2024.08.316; publication in preparation)***
 
 ## Requirements
 ### Data
