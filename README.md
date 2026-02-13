@@ -33,8 +33,6 @@ Input Data (Target): Plink binary files on ***GRCh37/hg19*** coordinates.
 
 Reference 1: 1KG Reference For PC-projection (Download from below)
 
-Reference 2: References for MitoPRS calculation (Available in /mitoPRS/ref/ in various formats)
-
 ### VENV setting (tested)
 Tested OS: Redhat Enterprise Linux Release 9.6 (Plow) and Ubuntu 24.04 LTS (Noble Numbat)
 
@@ -63,7 +61,7 @@ PRSice2 (https://github.com/choishingwan/PRSice?tab=readme-ov-file)
 > Make sure PRSice2_linux.R is in the directory "/mitoPRS/PRSice/"
 
 ## Outline & Usage
-1. Download Reference Files (1000Genomes, and relevant variants for Principal Components based on Human Genome Diversity Project) from here: 
+1. Download Reference Files (1000 Genomes, and relevant variants for Principal Components based on Human Genome Diversity Project variants) from here: 
 
 > ```https://www.dropbox.com/scl/fo/xdecc3pthm1q129bc2rgm/AGJcVMJyxsVqtKwoXFMUmb4?rlkey=7m11qxftru8hq1k2dbdeunhok&st=yxehuuxc&dl=0``` 
 >> Move the reference files to /mitoPRS/ref/ Folder
@@ -74,25 +72,22 @@ E.g.
 ```
 export PATH="$PATH:/home/plink1.9:/home/plink2"
 ```
-   
+> Make changes to the script directly, or it may work if you have already set your path in .bashrc to ./plink and ./plink2.
 3. Run MitoPRS Score
 
-```./score_mitoPRS.sh "targetprefix"```
+```./score_mitoPRS.sh "targetprefix" "outprefix```
 
 ## Output
 A .csv file containing the following:
 - IID
 - FID
-- Within-family ID of Father
-- Within-family ID of Mother
-- Sex code (1 = male, 2 = female, 0 = Unknown)
 - Phenotype Value (1 = Control, 2 = Case, -9/0 = Missing)
 - BD_mitoPRS_prsice2 (Score output from PRS-ice2; un-normalized)
 - BD_mitoPRS_prscsx (Score output from plink --score; un-normalized)
 - BD_mitoPRS_enet (Predicted probability [0, 1])
 - BD_mitoPRS_xgb (Predicted probability [0, 1])
 - BD_mitoPRS_null (Predicted probability based on Covariate-only Logistic Regression Model)
-- First 5 PCs projected based on FRAPOSA-OADP
+- PC 1-5 (First 5 PCs projected based on FRAPOSA-OADP)
 
 ## Usage
 ```./score_mitoPRS "targetprefix" "outprefix"```
