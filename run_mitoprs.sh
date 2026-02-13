@@ -27,7 +27,8 @@ rm -r "${target}"_common*
 
 ./align_to_pgc_ref.sh "${target}" "${target}"_mt "ref/combinedbdset" #$1=TargetPrefix $2=OutPrefix $3=reference bim prefix
 
-Rscript PRSice/PRSice.R \ #Make sure PRSice.R is located in ./PRSice/ directory
+#Make sure PRSice.R is located in ./PRSice/ directory
+Rscript PRSice/PRSice.R \
       --prsice PRSice/PRSice_linux \
       --base ref/BD.mitoPRS.sumstat.postCT.txt \
       --target "${target}"_mt \
