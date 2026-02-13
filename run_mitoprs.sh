@@ -34,7 +34,7 @@ Rscript PRSice/PRSice.R \
       --target "${target}"_mt \
       --binary-target T \
       --bar-levels 0.25 \
-      --fast-score \
+      --fastscore \
       --stat OR \
       --no-regress --no-clump --no-full \
       --out "$outpre"
@@ -42,7 +42,7 @@ Rscript PRSice/PRSice.R \
 plink --bfile "${target}"_mt --score ref/PRSCSx.bip.combined.txt 2 4 6 --out "$outpre".csx
 
 plink2 --bfile "${target}"_mt --extract ref/xgb_varids.txt --recode A --out "$outpre"_xgb
-awk 'BEGIN {OFS="\t"} {print $1, $2, $3, $4, $5, $6}' "$outpre"_xgb.raw > "outpre"_.pheno
+awk 'BEGIN {OFS="\t"} {print $1, $2, $3, $4, $5, $6}' "$outpre"_xgb.raw > "outpre".pheno
 awk '{for(i=7;i<=NF;i++) printf $i (i==NF?ORS:OFS)}' "$outpre"_xgb.raw | awk 'BEGIN {OFS="\t"} {$1=$1}1' > "$outpre"_xgb.geno
 sed -n '1p' "$outpre"_xgb.geno > varids_xgb.names
 tail -n +2 "$outpre"_xgb.geno > file.tmp && mv file.tmp "$outpre"_xgb.geno
