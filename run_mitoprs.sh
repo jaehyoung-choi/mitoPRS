@@ -15,7 +15,7 @@ cd "$(dirname "$0")"
 
 ./align_to_pgc_ref.sh "${target}" "ancestry" "ref/1kgref.bip" #use target, outputprefix, reference bim prefix as arguments
 plink2 --bfile ancestry --extract ref/common_vars_bip.txt --fill-missing-with-ref --make-bed --out "${target}"_tmp #Re-organizing order of variants, forcing to ref of population
-plink2 --bfile "${target}"_tmp --ref-allele 1kgref.bip.bim 6 2 --alt1-allele 5 2 --make-bed --out "${target}"_common #Forcing 1KG REF/ALT format
+plink2 --bfile "${target}"_tmp --ref-allele ref/1kgref.bip.bim 6 2 --alt1-allele 5 2 --make-bed --out "${target}"_common #Forcing 1KG REF/ALT format
 
 python -m FRAPOSA.fraposa_runner --stu_filepref "$target"_common --dim_ref 5 --dim_online 20 --out "${target}" 1kgref.bip
 
@@ -38,7 +38,7 @@ Rscript PRSice/PRSice.R \ #Make sure PRSice.R is located in ./PRSice/ directory
       --no-regress --no-clump --no-full \
       --out "$outpre"
 
-plink --bfile "${target}"_mt --score PRSCSx.bip.combined.txt 2 4 6 --out "$outpre".csx
+plink --bfile "${target}"_mt --score ref/PRSCSx.bip.combined.txt 2 4 6 --out "$outpre".csx
 
 plink2 --bfile "${target}"_mt --extract ref/xgb_varids.txt --recode A --out "$outpre"_xgb
 awk 'BEGIN {OFS="\t"} {print $1, $2, $3, $4, $5, $6}' "$outpre"_xgb.raw > "outpre"_.pheno
