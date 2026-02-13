@@ -60,7 +60,7 @@ R >= 3.4.3
 > Make sure RScript is executable as "Rscript" 
 
 PRSice2 (https://github.com/choishingwan/PRSice?tab=readme-ov-file)
-> Make sure PRSice2_linux.R is in the directory "/mitoPRS/PRSice/"
+> Make sure PRSice2_linux.R and binary is in the directory "/mitoPRS/PRSice/"
 
 ## Outline & Usage
 1. Download Reference Files (1000 Genomes, and relevant variants for Principal Components based on Human Genome Diversity Project variants) from here: 
