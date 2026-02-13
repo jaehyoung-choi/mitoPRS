@@ -64,6 +64,7 @@ fi
 
 plink2 --bfile tgt_combined \
        --extract "${REF_DATA}.bim" \
+       --ref-allele "${REF_DATA}.bim" 6 2 \
        --make-bed --out "$OUTPUT_PREFIX"
 
 # Cleanup
