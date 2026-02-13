@@ -13,7 +13,7 @@ cd "$(dirname "$0")"
 ## Extracting relevant variants to project PCs using FRAPOSA;
 ## Missing Variants will be replaced with ref allele from input REF/ALT format
 
-./align_to_pgc_ref.sh "${target}" "ancestry" "1kgref.bip" #use target, outputprefix, reference bim prefix as arguments
+./align_to_pgc_ref.sh "${target}" "ancestry" "ref/1kgref.bip" #use target, outputprefix, reference bim prefix as arguments
 plink2 --bfile ancestry --extract ref/common_vars_bip.txt --fill-missing-with-ref --make-bed --out "${target}"_tmp #Re-organizing order of variants, forcing to ref of population
 plink2 --bfile "${target}"_tmp --ref-allele 1kgref.bip.bim 6 2 --alt1-allele 5 2 --make-bed --out "${target}"_common #Forcing 1KG REF/ALT format
 
@@ -25,7 +25,7 @@ mv "${target}".pcs "${target}".oadp
 rm -r "${target}"_tmp*
 rm -r "${target}"_common*
 
-./align_to_pgc_ref.sh "${target}" "${target}"_mt "combinedbdset" #$1=TargetPrefix $2=OutPrefix $3=reference bim prefix
+./align_to_pgc_ref.sh "${target}" "${target}"_mt "ref/combinedbdset" #$1=TargetPrefix $2=OutPrefix $3=reference bim prefix
 
 Rscript PRSice/PRSice.R \ #Make sure PRSice.R is located in ./PRSice/ directory
       --prsice PRSice/PRSice_linux \
