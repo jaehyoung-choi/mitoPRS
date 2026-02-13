@@ -30,7 +30,7 @@ if [ -s missing_variants.bim.txt ]; then
     
     # Generate dummy ped file (FamilyID, SampleID, Paternal, Maternal, Sex, Phenotype, [0 0 for each SNP])
     # This creates a row for every sample with '0 0' for every missing SNP
-    awk -v n=$NUM_MISSING '{printf "%s %s %s %s %s %s", $1, $2, $3, $4, $5, $6; for(i=1; i<=n; i++) printf " 0 0"; print ""}' "${TGT_DATA}.fam" > dummy.ped
+    cat "${TGT_DATA}.fam" | tr -d '\r' | awk -v n=$NUM_MISSING '{ printf "%s %s %s %s %s %s", $1, $2, $3, $4, $5, $6; for(i=1; i<=n; i++) printf " 0 0"; print "" }' > dummy.ped
     
     # Convert dummy to binary
     plink --ped dummy.ped --map dummy.map --make-bed --out tgt_missing --noweb
