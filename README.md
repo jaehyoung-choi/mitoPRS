@@ -32,8 +32,10 @@ Input Data (Target): Plink binary files on ***GRCh37/hg19*** coordinates.
 "TargetPrefix" refers to the file prefix of the plink binary files (E.g. *targetprefix*.{bim, bed, fam})
 
 > Current version supports "rsids" and/or "CHR:POS" format. Ref and Alt Allele formats are saved in files within /mitoPRS/ref/ directory)
+> Place target data in ./mitoPRS/ directory
 
 Reference 1: 1KG Reference For PC-projection (Download from below)
+> Place reference data in ./mitoPRS/ref/ directory
 
 ### VENV setting (tested)
 Tested OS: Redhat Enterprise Linux Release 9.6 (Plow) and Ubuntu 24.04 LTS (Noble Numbat)
@@ -75,6 +77,8 @@ E.g.
 export PATH="$PATH:/home/plink1.9:/home/plink2"
 ```
 > Make changes to the script directly, or it may work if you have already set your path in .bashrc to ./plink and ./plink2.
+> If not already, make the scripts executable.
+```chmod +x *```
 3. Run MitoPRS Score
 
 ```./score_mitoPRS.sh "targetprefix" "outprefix"```
