@@ -53,7 +53,7 @@ awk '{for(i=7;i<=NF;i++) printf $i (i==NF?ORS:OFS)}' "$outpre"_enet.raw | awk 'B
 sed -n '1p' "$outpre"_enet.geno > varids_enet.names
 tail -n +2 "$outpre"_enet.geno > file.tmp && mv file.tmp "$outpre"_enet.geno
 
-python score_mitoprs.py --ext-feature "${outpre}" --ext-cov "${target}".oadp --ext-label "${target}".pheno --train_names "varids" --out-prefix "${outpre}"
+python score_mitoprs.py --ext-feature "${outpre}" --ext-cov "${target}".oadp --ext-label "${target}".pheno --train-names "varids" --out-prefix "${outpre}"
 
 #Final Cleanup
 rm *.geno
