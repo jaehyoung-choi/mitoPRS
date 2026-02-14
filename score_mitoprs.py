@@ -11,7 +11,7 @@ from mitoprs_utils import InformedElasticNet
 def main():
     # Hardcoded paths as requested
     XGB_PATH = "model/0.1_xgb_model.pkl"
-    ENET_PATH = "ref/0.3_enet_model.pkl"
+    ENET_PATH = "model/0.3_enet_model.pkl"
 
     #Making output directory if doesn't exist
     output_dir = "./output"
@@ -78,4 +78,5 @@ def main():
     
 
 if __name__ == "__main__":
+
     main()
