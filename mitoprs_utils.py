@@ -26,7 +26,7 @@ def load_data_split(feat_path, cov_path, name_path, label_path):
     else:
         print(f"Warning: Name count ({len(feature_names)}) does not match. Column count ({X_main.shape[1]}).")
         
-    cov_df = pd.read_csv(cov_path, sep='\t', header=None).iloc[:, 2:]
+    cov_df = pd.read_csv(cov_path, sep='\t', header=True).iloc[:, 2:]
     cov_names = [f"Covariate{i+1}" for i in range(cov_df.shape[1])]
     cov_df.columns = cov_names
 
@@ -110,3 +110,4 @@ class InformedElasticNet(LogisticRegression):
             
         # 3. Resume training on full data
         return super().fit(X, y)
+
