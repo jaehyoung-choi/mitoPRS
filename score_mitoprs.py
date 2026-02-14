@@ -1,5 +1,6 @@
 import joblib
 import os
+import sys
 import xgboost as xgb
 import pandas as pd
 import numpy as np
@@ -12,7 +13,8 @@ def main():
     # Hardcoded paths as requested
     XGB_PATH = "model/0.1_xgb_model.pkl"
     ENET_PATH = "model/0.3_enet_model.pkl"
-
+    sys.modules['enet_utils'] = mitoprs_utils
+    
     #Making output directory if doesn't exist
     output_dir = "./output"
     os.makedirs("output", exist_ok=True)
@@ -80,3 +82,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
