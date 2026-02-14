@@ -5,7 +5,8 @@ import xgboost as xgb
 import pandas as pd
 import numpy as np
 from sklearn.metrics import roc_auc_score
-import mitoprs_utils as utils 
+import mitoprs_utils as utils
+sys.modules['enet_utils'] = utils
 # This import is vital: it provides load_data_split_median AND InformedElasticNet
 from mitoprs_utils import InformedElasticNet
 
@@ -13,7 +14,7 @@ def main():
     # Hardcoded paths as requested
     XGB_PATH = "model/0.1_xgb_model.pkl"
     ENET_PATH = "model/0.3_enet_model.pkl"
-    sys.modules['enet_utils'] = mitoprs_utils
+    
     
     #Making output directory if doesn't exist
     output_dir = "./output"
@@ -82,4 +83,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
