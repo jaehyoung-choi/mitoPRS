@@ -15,12 +15,10 @@ def main():
     XGB_PATH = "model/0.1_xgb_model.pkl"
     ENET_PATH = "model/0.3_enet_model.pkl"
     
-    
     #Making output directory if doesn't exist
     output_dir = "./output"
     os.makedirs("output", exist_ok=True)
     
-    # These should still come from arguments to stay flexible for different cohorts
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument('--ext-feature', required=True)
@@ -57,6 +55,7 @@ def main():
         f"{args.ext_feature}_enet.geno", args.ext_cov, f"{args.train_names}_enet.names", args.ext_label
     )
     X_new = X_new.fillna(X_new.median())
+    #If median filling still results in NA (e.g. when all values for a given variant is missing, replacing with REF 0/0 genotype)
     X_new_np = np.ascontiguousarray(X_new.values, dtype=np.float32)
     
     enet_probs = enet_model.predict_proba(X_new_np)[:, 1]
@@ -83,5 +82,6 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
