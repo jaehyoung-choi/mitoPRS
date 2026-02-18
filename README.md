@@ -36,8 +36,6 @@ jaehyoung.choi@mail.utoronto.ca
 Input Data (Target): Plink binary files on ***GRCh37/hg19*** coordinates.
 "TargetPrefix" refers to the file prefix of the plink binary files (E.g. *targetprefix*.{bim, bed, fam})
 
-> Current version supports "rsids" and/or "CHR:POS" format. Ref and Alt Allele formats are saved in files within /mitoPRS/ref/ directory)
-
 > Place target data in ./mitoPRS/ directory
 
 Reference 1: 1KG Reference For PC-projection (Download from below)
@@ -76,7 +74,7 @@ PRSice2 (https://github.com/choishingwan/PRSice?tab=readme-ov-file)
 > ```https://www.dropbox.com/scl/fo/xdecc3pthm1q129bc2rgm/AGJcVMJyxsVqtKwoXFMUmb4?rlkey=7m11qxftru8hq1k2dbdeunhok&st=yxehuuxc&dl=0``` 
 >> Move the reference files to /mitoPRS/ref/ Folder
 
-2. Set the PLINK executable paths in bash script (.sh) files.
+2. Set the PLINK executable paths in bash script (run_mitoprs.sh) file.
 
 E.g.
 ```
@@ -87,7 +85,7 @@ export PATH="$PATH:/home/plink1.9:/home/plink2"
 ```chmod +x *```
 3. Run MitoPRS Score
 
-```./score_mitoPRS.sh "targetprefix" "outprefix"```
+```./run_mitoPRS.sh "targetprefix" "outprefix"```
 
 ## Output
 A .csv file written to /mitoPRS/output/ containing:
@@ -110,7 +108,7 @@ A .csv file written to /mitoPRS/output/ containing:
 6. Check bash scripts are executable (e.g. chmod +x *.sh)
 
 ## Usage
-```./score_mitoPRS.sh "targetprefix" "outprefix"```
+```./run_mitoPRS.sh "targetprefix" "outprefix"```
 
 ## Discovery Data
 Individual-level datasets from Psychiatric Genomics Consortium
