@@ -25,7 +25,7 @@ mv "${target}".pcs "${target}".oadp
 rm -r "${target}"_tmp*
 rm -r "${target}"_common*
 
-./align_to_pgc_ref.sh "${target}" "${target}"_mt "ref/combinedbdset" #$1=TargetPrefix $2=OutPrefix $3=reference bim prefix
+./align_to_ref.sh "${target}" "${target}"_mt "ref/combinedbdset" #$1=TargetPrefix $2=OutPrefix $3=reference bim prefix
 
 #Make sure PRSice.R is located in ./PRSice/ directory
 Rscript PRSice/PRSice.R \
@@ -41,14 +41,19 @@ Rscript PRSice/PRSice.R \
 
 plink --bfile "${target}"_mt --score ref/PRSCSx.bip.combined.txt 2 4 6 --out "$outpre".csx
 
-plink2 --bfile "${target}"_mt --extract ref/xgb_varids.txt --recode A --out "$outpre"_xgb
+# Extracting Variants for Model Input
+
+./align_to_ref.sh "${target}" "${target}"_model "ref/bd.allele.reference" 
+
+plink --bfile "${target}"_model --extract ref/xgb_varids.txt --keep-allele-order --recode A --out "$outpre"_xgb
+
 awk 'BEGIN {OFS="\t"} {print $1, $2, $3, $4, $5, $6}' "$outpre"_xgb.raw > "outpre".pheno
 awk '{for(i=7;i<=NF;i++) printf $i (i==NF?ORS:OFS)}' "$outpre"_xgb.raw | awk 'BEGIN {OFS="\t"} {$1=$1}1' > "$outpre"_xgb.geno
 sed -n '1p' "$outpre"_xgb.geno > varids_xgb.names
 tail -n +2 "$outpre"_xgb.geno > file.tmp && mv file.tmp "$outpre"_xgb.geno
 tail -n +2 "$outpre".pheno | awk '{$1=$1}1' OFS='\t' > file.tmp && mv file.tmp "$outpre".pheno
 
-plink2 --bfile "${target}"_mt --extract ref/enet_varids.txt --recode A --out "$outpre"_enet
+plink --bfile "${target}"_mt --extract ref/enet_varids.txt --keep-allele-order --recode A --out "$outpre"_enet
 awk '{for(i=7;i<=NF;i++) printf $i (i==NF?ORS:OFS)}' "$outpre"_enet.raw | awk 'BEGIN {OFS="\t"} {$1=$1}1' > "$outpre"_enet.geno
 sed -n '1p' "$outpre"_enet.geno > varids_enet.names
 tail -n +2 "$outpre"_enet.geno > file.tmp && mv file.tmp "$outpre"_enet.geno
