@@ -67,8 +67,8 @@ def main():
     results['BD_mitoPRS_ENet'] = enet_probs
 
     # 6. Loading other scores for appending
-    csx_df = pd.read_csv(f"{args.out_prefix}.profile", usecols=['FID', 'IID', 'SCORE']).rename(columns={'SCORE': 'BD_mitoPRS_PRSCSx'})
-    ice_df = pd.read_csv(f"{args.out_prefix}.all_score", usecols=['FID', 'IID', 'Pt_0.25']).rename(columns={'Pt_0.25': 'BD_mitoPRS_PRSice'})
+    csx_df = pd.read_csv(f"{args.out_prefix}.profile", sep=r'\s+', usecols=['FID', 'IID', 'SCORE']).rename(columns={'SCORE': 'BD_mitoPRS_PRSCSx'})
+    ice_df = pd.read_csv(f"{args.out_prefix}.all_score", sep=r'\s+', usecols=['FID', 'IID', 'Pt_0.25']).rename(columns={'Pt_0.25': 'BD_mitoPRS_PRSice'})
     pc_df = pd.read_csv(args.ext_cov, usecols=['FID', 'IID', 'PC1', 'PC2', 'PC3', 'PC4', 'PC5'])
 
     # 7. Export
@@ -82,6 +82,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
