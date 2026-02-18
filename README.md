@@ -37,6 +37,7 @@ Input Data (Target): Plink binary files on ***GRCh37/hg19*** coordinates.
 "TargetPrefix" refers to the file prefix of the plink binary files (E.g. *targetprefix*.{bim, bed, fam})
 
 > Current version supports "rsids" and/or "CHR:POS" format. Ref and Alt Allele formats are saved in files within /mitoPRS/ref/ directory)
+
 > Place target data in ./mitoPRS/ directory
 
 Reference 1: 1KG Reference For PC-projection (Download from below)
@@ -104,7 +105,7 @@ A .csv file written to /mitoPRS/output/ containing:
 1. Check PLINK1.90b and PLINK2 paths have been updated in the ./score_mitoPRS.sh bash script file
 2. Check PRSice2 executable and binary are in the folder ~/mitoPRS/PRSice/ folder
 3. Check the 1KG reference data has been downloaded, and added to ~/mitoPRS/ref/ folder
-4. Check your PLINK Binary data has no missing sex code (Phenotype code can be missing)
+4. Check your PLINK Binary data has no missing sex code (1 or 2; Phenotype code can be missing)
 5. Check python is executable using "python" in CLI (If it is runnable through "python3", change the bash script directly, or add as alias)
 6. Check bash scripts are executable (e.g. chmod +x *.sh)
 
