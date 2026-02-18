@@ -17,6 +17,11 @@ The mitoPRS pipeline estimates ancestry-related principal components using 1000 
 
 _Note: The majority of the development/discovery data is dependent on individuals of EUR-like Superpopulation Ancestry_
 
+_Note: The script will automatically search for REF/ALT formats or strand-flips on variants to be used for scoring. If a variant is not found, or REF/ALT is different from the reference, or is tri-allelic, it will generate "dummy" variables as missing. The missing variables will be: [ignored for PRSice2 and PRSCSx], [Hanlded automatically in XGB], [Filled with REF/REF for OADP and ENET]_ 
+
+### Contact
+jaehyoung.choi@mail.utoronto.ca
+
 ### References
 - FRAPOSA (https://github.com/PGScatalog/fraposa_pgsc)
 - MitoCarta 3.0 (https://www.broadinstitute.org/mitocarta/mitocarta30-inventory-mammalian-mitochondrial-proteins-and-pathways)
@@ -84,7 +89,7 @@ export PATH="$PATH:/home/plink1.9:/home/plink2"
 ```./score_mitoPRS.sh "targetprefix" "outprefix"```
 
 ## Output
-A .csv file containing the following:
+A .csv file written to /mitoPRS/output/ containing:
 - IID
 - FID
 - Phenotype Value (1 = Control, 2 = Case, -9/0 = Missing)
@@ -94,9 +99,18 @@ A .csv file containing the following:
 - BD_mitoPRS_xgb (Predicted probability [0, 1])
 - BD_mitoPRS_null (Predicted probability based on Covariate-only Logistic Regression Model)
 - PC 1-5 (First 5 PCs projected based on FRAPOSA-OADP)
+  
+## Checklist
+1. Check PLINK1.90b and PLINK2 paths have been updated in the ./score_mitoPRS.sh bash script file
+2. Check PRSice2 executable and binary are in the folder ~/mitoPRS/PRSice/ folder
+3. Check the 1KG reference data has been downloaded, and added to ~/mitoPRS/ref/ folder
+4. Check your PLINK Binary data has no missing sex code (Phenotype code can be missing)
+5. Check python is executable using "python" in CLI (If it is runnable through "python3", change the bash script directly, or add as alias)
+6. Check bash scripts are executable (e.g. chmod +x *.sh)
 
 ## Usage
-```./score_mitoPRS "targetprefix" "outprefix"```
+```./score_mitoPRS.sh "targetprefix" "outprefix"```
+
 ## Discovery Data
 Individual-level datasets from Psychiatric Genomics Consortium
 - Bipolar Disorder Working Group (wave3)
