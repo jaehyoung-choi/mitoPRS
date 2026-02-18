@@ -30,14 +30,14 @@ def load_data_split(feat_path, cov_path, name_path, label_path):
     cov_names = [f"Covariate{i+1}" for i in range(cov_df.shape[1])]
     cov_df.columns = cov_names
 
-    label_df = pd.read_csv(label_path, sep='\t', header=None, na_values=['-9','NA'])
+    label_df = pd.read_csv(label_path, sep='\t', header=None)
     print(label_df.shape)
     print(X_main.shape)
 
     # Binary encoding: 2 is 1 (Case), 1 is 0 (Control)
     sex = (label_df.iloc[:, 4] == 2).astype(np.int8)
     y = (label_df.iloc[:, 5] == 2).astype(np.int8)
-    id_df = label_df.iloc[:, 0:1]
+    id_df = label_df.iloc[:, 0:2]
 
     X_main.reset_index(drop=True, inplace=True)
     cov_df.reset_index(drop=True, inplace=True)
@@ -110,5 +110,6 @@ class InformedElasticNet(LogisticRegression):
             
         # 3. Resume training on full data
         return super().fit(X, y)
+
 
 
