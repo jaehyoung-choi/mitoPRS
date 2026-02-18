@@ -62,6 +62,7 @@ def main():
 
     # 5. Create Output DataFrame
     results = identifiers.copy()
+    results.columns = ['FID','IID']
     results['True_Label'] = y_new.values
     results['BD_mitoPRS_XGB'] = xgb_probs
     results['BD_mitoPRS_ENet'] = enet_probs
@@ -82,6 +83,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
