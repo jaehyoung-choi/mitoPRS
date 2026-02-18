@@ -28,6 +28,7 @@ rm -r "${target}"_common*
 ./align_to_ref.sh "${target}" "${target}"_mt "ref/combinedbdset" #$1=TargetPrefix $2=OutPrefix $3=reference bim prefix
 
 #Make sure PRSice.R is located in ./PRSice/ directory
+#Note summary statistic is already thresholded at p<0.2, and Clumped accordingly to the discovery data structure
 Rscript PRSice/PRSice.R \
       --prsice PRSice/PRSice_linux \
       --base ref/BD.mitoPRS.sumstat.postCT.txt \
