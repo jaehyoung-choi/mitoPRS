@@ -15,7 +15,7 @@ cd "$(dirname "$0")"
 
 ./align_to_pgc_ref.sh "${target}" "ancestry" "ref/1kgref.bip" #use target, outputprefix, reference bim prefix as arguments
 plink2 --bfile ancestry --extract ref/common_vars_bip.txt --fill-missing-with-ref --make-bed --out "${target}"_tmp #Re-organizing order of variants, forcing to ref of population
-plink2 --bfile "${target}"_tmp --ref-allele ref/1kgref.bip.bim 6 2 --alt1-allele ref/1kgref.bip.bim 5 2 --make-bed --out "${target}"_common #Forcing 1KG REF/ALT format
+plink2 --bfile "${target}"_tmp --ref-allele ref/1kgref.bip.bim 6 2 --alt-allele ref/1kgref.bip.bim 5 2 --make-bed --out "${target}"_common #Forcing 1KG REF/ALT format
 
 python -m FRAPOSA.fraposa_runner --stu_filepref "$target"_common --dim_ref 5 --dim_online 20 --out "${target}" 1kgref.bip
 
