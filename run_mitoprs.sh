@@ -74,6 +74,7 @@ rm *.log
 rm *_model.*
 rm *_mt.*
 rm *.raw
+rm ancestry*
 
 
 
