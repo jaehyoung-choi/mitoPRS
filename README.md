@@ -80,7 +80,7 @@ PRSice2 (https://github.com/choishingwan/PRSice?tab=readme-ov-file)
 
 2. Go through Checklist
 
-## Checklist
+### Checklist
 1. Check PLINK1.90b and PLINK2 paths have been updated in the ./score_mitoPRS.sh bash script file
 E.g.
 ```
