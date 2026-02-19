@@ -13,7 +13,7 @@ from sklearn.model_selection import RandomizedSearchCV
 
 def load_data_split(feat_path, cov_path, name_path, label_path):
     """Loads a specific split independently using memory-efficient dtypes."""
-    names_df = pd.read_csv(name_path, sep = None, header = None, engine = 'python')
+    names_df = pd.read_csv(name_path, sep=r'\s+', header = None, engine = 'python')
     feature_names = names_df.iloc[0].values.tolist()
     X_main = pd.read_csv(feat_path, sep='\t', header=None,
                          engine='c', low_memory=False, memory_map=True, na_values=['-9','NA', '3'])
@@ -111,6 +111,7 @@ class InformedElasticNet(LogisticRegression):
             
         # 3. Resume training on full data
         return super().fit(X, y)
+
 
 
 
