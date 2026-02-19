@@ -81,20 +81,17 @@ PRSice2 (https://github.com/choishingwan/PRSice?tab=readme-ov-file)
 2. Go through Checklist
 
 ### Checklist
-1. Check PLINK1.90b and PLINK2 paths have been updated in the ./score_mitoPRS.sh bash script file
+> Check PLINK1.90b and PLINK2 paths have been updated in the ./score_mitoPRS.sh bash script file
 E.g.
 ```
 export PATH="$PATH:/home/plink1.9:/home/plink2"
 ```
-2. Check PRSice2 executable and binary are in the folder ~/mitoPRS/PRSice/ folder
-3. Check the 1KG reference data has been downloaded, and added to ~/mitoPRS/ref/ folder
-4. Check your PLINK Binary data has no missing sex code (1 or 2; Phenotype code can be missing)
-5. Check python is executable using "python" in CLI (If it is runnable through "python3", change the bash script directly, or add as alias)
-6. Check bash scripts are executable (e.g. chmod +x *.sh)
+> Check PRSice2 executable and binary are in the folder ~/mitoPRS/PRSice/ folder
+> Check the 1KG reference data has been downloaded, and added to ~/mitoPRS/ref/ folder
+> Check your PLINK Binary data has no missing sex code (1 or 2; Phenotype code can be missing)
+> Check python is executable using "python" in CLI (If it is runnable through "python3", change the bash script directly, or add as alias)
+> Check bash scripts are executable (e.g. chmod +x *.sh)
 
-> Make changes to the script directly, or it may work if you have already set your path in .bashrc to ./plink and ./plink2.
-> If not already, make the scripts executable.
-```chmod +x *```
 3. Run MitoPRS Score
 
 ```./run_mitoPRS.sh "targetprefix" "outprefix"```
