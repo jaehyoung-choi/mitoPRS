@@ -81,11 +81,11 @@ PRSice2 (https://github.com/choishingwan/PRSice?tab=readme-ov-file)
 2. Go through Checklist
 
 ### Checklist
-> Check PLINK1.90b and PLINK2 paths have been updated in the ./score_mitoPRS.sh bash script file
-E.g.
-```
+> > Check PLINK1.90b and PLINK2 paths have been updated in the ./score_mitoPRS.sh bash script file
+> E.g.
+> ```
 export PATH="$PATH:/home/plink1.9:/home/plink2"
-```
+> ```
 > > Check PRSice2 executable and binary are in the folder ~/mitoPRS/PRSice/ folder
 
 > > Check the 1KG reference data has been downloaded, and added to ~/mitoPRS/ref/ folder
