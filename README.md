@@ -86,11 +86,15 @@ E.g.
 ```
 export PATH="$PATH:/home/plink1.9:/home/plink2"
 ```
-> Check PRSice2 executable and binary are in the folder ~/mitoPRS/PRSice/ folder
-> Check the 1KG reference data has been downloaded, and added to ~/mitoPRS/ref/ folder
-> Check your PLINK Binary data has no missing sex code (1 or 2; Phenotype code can be missing)
-> Check python is executable using "python" in CLI (If it is runnable through "python3", change the bash script directly, or add as alias)
-> Check bash scripts are executable (e.g. chmod +x *.sh)
+> > Check PRSice2 executable and binary are in the folder ~/mitoPRS/PRSice/ folder
+
+> > Check the 1KG reference data has been downloaded, and added to ~/mitoPRS/ref/ folder
+
+> > Check your PLINK Binary data has no missing sex code (1 or 2; Phenotype code can be missing)
+
+> > Check python is executable using "python" in CLI (If it is runnable through "python3", change the bash script directly, or add as alias)
+
+> > Check bash scripts are executable (e.g. chmod +x *.sh)
 
 3. Run MitoPRS Score
 
