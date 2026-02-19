@@ -78,12 +78,20 @@ PRSice2 (https://github.com/choishingwan/PRSice?tab=readme-ov-file)
 > ```https://www.dropbox.com/scl/fo/xdecc3pthm1q129bc2rgm/AGJcVMJyxsVqtKwoXFMUmb4?rlkey=7m11qxftru8hq1k2dbdeunhok&st=yxehuuxc&dl=0``` 
 >> Move the reference files to /mitoPRS/ref/ Folder
 
-2. Set the PLINK executable paths in bash script (run_mitoprs.sh) file.
+2. Go through Checklist
 
+## Checklist
+1. Check PLINK1.90b and PLINK2 paths have been updated in the ./score_mitoPRS.sh bash script file
 E.g.
 ```
 export PATH="$PATH:/home/plink1.9:/home/plink2"
 ```
+2. Check PRSice2 executable and binary are in the folder ~/mitoPRS/PRSice/ folder
+3. Check the 1KG reference data has been downloaded, and added to ~/mitoPRS/ref/ folder
+4. Check your PLINK Binary data has no missing sex code (1 or 2; Phenotype code can be missing)
+5. Check python is executable using "python" in CLI (If it is runnable through "python3", change the bash script directly, or add as alias)
+6. Check bash scripts are executable (e.g. chmod +x *.sh)
+
 > Make changes to the script directly, or it may work if you have already set your path in .bashrc to ./plink and ./plink2.
 > If not already, make the scripts executable.
 ```chmod +x *```
@@ -103,14 +111,6 @@ A .csv file written to /mitoPRS/output/ containing:
 - BD_mitoPRS_null (Predicted probability based on Covariate-only Logistic Regression Model)
 - PC 1-5 (First 5 PCs projected based on FRAPOSA-OADP)
   
-## Checklist
-1. Check PLINK1.90b and PLINK2 paths have been updated in the ./score_mitoPRS.sh bash script file
-2. Check PRSice2 executable and binary are in the folder ~/mitoPRS/PRSice/ folder
-3. Check the 1KG reference data has been downloaded, and added to ~/mitoPRS/ref/ folder
-4. Check your PLINK Binary data has no missing sex code (1 or 2; Phenotype code can be missing)
-5. Check python is executable using "python" in CLI (If it is runnable through "python3", change the bash script directly, or add as alias)
-6. Check bash scripts are executable (e.g. chmod +x *.sh)
-
 ## Usage
 ```./run_mitoPRS.sh "targetprefix" "outprefix"```
 
