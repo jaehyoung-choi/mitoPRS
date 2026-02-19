@@ -59,9 +59,9 @@ Key Requirements for are saved in ```mitoprs_requirements.txt```
 > ```chmod +x *.sh```
 
 ### Preinstallation Software
-PLINK 2.0 (https://www.cog-genomics.org/plink/2.0/)
+PLINK 2.0 (https://www.cog-genomics.org/plink/2.0/) Most Recent Version
 
-PLINK 1.90b (https://www.cog-genomics.org/plink/)
+PLINK 1.90b (https://www.cog-genomics.org/plink/) Most Recent Version
 
 Python >= 3.11.3 (Lower versions have not been tested)
 > Make sure python is executable as "python"
