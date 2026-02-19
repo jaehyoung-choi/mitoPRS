@@ -66,10 +66,8 @@ rm *.geno
 rm *.pheno
 rm varids*
 rm *.profile
-rm *.png
 rm *.all_score
 rm *.prsice
-rm *.valid
 rm *.log
 rm *_model.*
 rm *_mt.*
