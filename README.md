@@ -91,7 +91,7 @@ PRSice2 (https://github.com/choishingwan/PRSice?tab=readme-ov-file)
 
 > > Check python is executable using "python" in CLI (If it is runnable through "python3", change the bash script directly, or add as alias)
 
-> > Check bash scripts are executable (e.g. chmod +x *.sh)
+> > Check bash scripts are executable (e.g. ```chmod +x *.sh```)
 
 3. Run MitoPRS Score
 
