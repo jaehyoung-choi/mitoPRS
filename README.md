@@ -52,7 +52,7 @@ Key Requirements for are saved in ```mitoprs_requirements.txt```
 
 > ```conda activate mitoprs```
 
-> ```conda install --file mitoprs_requirements.txt```
+> ```pip install mitoprs_requirements.txt```
 
 ### Preinstallation Software
 PLINK 2.0 (https://www.cog-genomics.org/plink/2.0/)
