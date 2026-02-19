@@ -43,6 +43,7 @@ def load_data_split(feat_path, cov_path, name_path, label_path):
     cov_df.reset_index(drop=True, inplace=True)
 
     X = pd.concat([X_main, cov_df], axis=1)
+    X = X.copy()
     X['sex'] = sex.values
     print(np.isinf(X).sum().sum())
     print(f"Final dimension of dataset {X.shape}")
@@ -110,6 +111,7 @@ class InformedElasticNet(LogisticRegression):
             
         # 3. Resume training on full data
         return super().fit(X, y)
+
 
 
 
