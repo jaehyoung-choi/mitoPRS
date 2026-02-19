@@ -95,7 +95,7 @@ PRSice2 (https://github.com/choishingwan/PRSice?tab=readme-ov-file)
 
 3. Run MitoPRS Score
 
-```./run_mitoPRS.sh "targetprefix" "outprefix"```
+```./run_mitoprs.sh "targetprefix" "outprefix"```
 
 ## Output
 A .csv file written to /mitoPRS/output/ containing:
@@ -110,7 +110,7 @@ A .csv file written to /mitoPRS/output/ containing:
 - PC 1-5 (First 5 PCs projected based on FRAPOSA-OADP)
   
 ## Usage
-```./run_mitoPRS.sh "targetprefix" "outprefix"```
+```./run_mitoprs.sh "targetprefix" "outprefix"```
 
 ## Discovery Data
 Individual-level datasets from Psychiatric Genomics Consortium
