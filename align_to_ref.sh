@@ -9,7 +9,7 @@ export REF_DATA="$3"
 awk '{print $1, $4, $4, $2}' "${REF_DATA}.bim" > ref_ranges.txt
 plink2 --bfile "$TGT_DATA" --extract range ref_ranges.txt --set-all-var-ids @:#:\$r:\$a --make-bed --out tgt_tmp_filtered
 # Assuring duplicates are removed, overwriting file.
-plink2 --bfile tgt_tmp_filtered --rm-dup force-fist --make-bed --out tgt_tmp_filtered
+plink2 --bfile tgt_tmp_filtered --rm-dup force-first --make-bed --out tgt_tmp_filtered
 
 # 2. Logic via Python
 python align_variant.py "$REF_DATA" tgt_tmp_filtered
