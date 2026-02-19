@@ -48,6 +48,8 @@ Key Requirements for are saved in ```mitoprs_requirements.txt```
 
 > ```git clone https://github.com/jaehyoung-choi/mitoPRS.git```
 
+> ```cd mitoPRS```
+
 > ```conda create -n mitoprs python=3.11.3```
 
 > ```conda activate mitoprs```
