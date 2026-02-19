@@ -68,9 +68,12 @@ rm varids*
 rm *.profile
 rm *.png
 rm *.all_score
+rm *.prsice
 rm *.valid
 rm *.log
-
+rm *_model.{bed, bim, fam}
+rm *_mt.{bed, bim, fam}
+rm *.raw
 
 
 
