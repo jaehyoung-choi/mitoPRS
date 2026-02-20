@@ -73,6 +73,8 @@ rm *_model.*
 rm *_mt.*
 rm *.raw
 rm ancestry*
+rm *.names
+rm *.oadp
 
 
 
