@@ -9,6 +9,8 @@ import mitoprs_utils as utils
 sys.modules['enet_utils'] = utils
 # This import is vital: it provides load_data_split_median AND InformedElasticNet
 from mitoprs_utils import InformedElasticNet
+import sklearn
+sklearn.set_config(transform_output="pandas")
 
 def main():
     # Hardcoded paths as requested
@@ -41,7 +43,7 @@ def main():
     # Predict
     print(">>> Running predictions...")
     # XGBoost
-    xgb_probs = xgb_model.predict_proba(xgb.DMatrix(X_new))[:, 1]
+    xgb_probs = xgb_model.predict_proba(X_new)[:, 1]
     
     del X_new, y_new, full_names, identifiers
 
@@ -78,6 +80,7 @@ def main():
     
 if __name__ == "__main__":
     main()
+
 
 
 
