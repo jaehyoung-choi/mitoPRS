@@ -41,8 +41,7 @@ def main():
     # Predict
     print(">>> Running predictions...")
     # XGBoost
-    X_new.columns = full_names
-    xgb_probs = xgb_model.predict_proba(X_new)[:, 1]
+    xgb_probs = xgb_model.predict_proba(xgb.DMatrix(X_new))[:, 1]
     
     del X_new, y_new, full_names, identifiers
 
@@ -79,6 +78,7 @@ def main():
     
 if __name__ == "__main__":
     main()
+
 
 
 
