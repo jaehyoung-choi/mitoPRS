@@ -41,6 +41,7 @@ def main():
     # Predict
     print(">>> Running predictions...")
     # XGBoost
+    X_new.columns = full_names
     xgb_probs = xgb_model.predict_proba(X_new)[:, 1]
     
     del X_new, y_new, full_names, identifiers
@@ -49,6 +50,7 @@ def main():
     X_new, y_new, full_names, identifiers = utils.load_data_split(
         f"{args.ext_feature}_enet.geno", args.ext_cov, f"{args.train_names}_enet.names", args.ext_label
     )
+    X_new.columns = full_names
     X_new = X_new.fillna(X_new.median())
     #If median filling still results in NA (e.g. when all values for a given variant is missing, replacing with REF 0/0 genotype)
     X_new = X_new.fillna(0)
@@ -77,6 +79,7 @@ def main():
     
 if __name__ == "__main__":
     main()
+
 
 
 
