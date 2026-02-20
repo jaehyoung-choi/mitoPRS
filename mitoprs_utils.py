@@ -17,6 +17,7 @@ def load_data_split(feat_path, cov_path, name_path, label_path):
     feature_names = names_df.iloc[0].values.tolist()
     X_main = pd.read_csv(feat_path, sep='\t', header=None,
                          engine='c', low_memory=False, memory_map=True, na_values=['-9','NA', '3'])
+    X_main = X_main.copy()
 
     print(f"Checking shapes of loaded data: {X_main.shape}, feature length: {len(feature_names)}")
 
@@ -36,15 +37,16 @@ def load_data_split(feat_path, cov_path, name_path, label_path):
 
     # Binary encoding: 2 is 1 (Case), 1 is 0 (Control)
     sex = (label_df.iloc[:, 4] == 2).astype(np.int8)
+    sex.name = 'sex'
     y = (label_df.iloc[:, 5] == 2).astype(np.int8)
     id_df = label_df.iloc[:, 0:2]
 
     X_main.reset_index(drop=True, inplace=True)
     cov_df.reset_index(drop=True, inplace=True)
 
-    X = pd.concat([X_main, cov_df], axis=1)
+    X = pd.concat([X_main, cov_df, sex.reset_index(drop = True)], axis=1)
     X = X.copy()
-    X['sex'] = sex.values
+    
     print(np.isinf(X).sum().sum())
     print(f"Final dimension of dataset {X.shape}")
     print(f"Label breakdown: {np.unique(y, return_counts=True)}")
@@ -111,6 +113,7 @@ class InformedElasticNet(LogisticRegression):
             
         # 3. Resume training on full data
         return super().fit(X, y)
+
 
 
 
