@@ -2,9 +2,9 @@
 **Pipeline for calculation of mitoPRS for psychiatric disorders.**
 ## Description
 The provided files compute calculate mitoPRS for psychiatric disorders.
-Beta Version (Feb 2026)
+Beta Version 1.1 (Mar 2026)
 
-Currently supported: Bipolar Disorder; ~~Schizophrenia~~ (updating soon)
+Currently supported: Bipolar Disorder; Schizophrenia (updated)
 
 The current version contains computation of ***mitoPRS*** (*genetic risk score for disorder based on single-nucleotide variations attributable to mitochondrially-acting protein coding genes*) using:
 - PRSice-2
