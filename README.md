@@ -59,9 +59,9 @@ Key Requirements for are saved in ```mitoprs_requirements.txt```
 > ```chmod +x *.sh```
 
 ### Preinstallation Software
-PLINK 2.0 (https://www.cog-genomics.org/plink/2.0/) Most Recent Version
+PLINK 2.0 (https://www.cog-genomics.org/plink/2.0/) Feb 2026 or more recent
 
-PLINK 1.90b (https://www.cog-genomics.org/plink/) Most Recent Version
+PLINK 1.90b (https://www.cog-genomics.org/plink/) Jan 2026 or more recent
 
 Python >= 3.11.3 (Lower versions have not been tested)
 > Make sure python is executable as "python"
@@ -70,7 +70,7 @@ R >= 3.4.3
 > Make sure RScript is executable as "Rscript" 
 
 PRSice2 (https://github.com/choishingwan/PRSice?tab=readme-ov-file)
-> Make sure PRSice2_linux.R and binary is in the directory "/mitoPRS/PRSice/"
+> Make sure PRSice2_linux.R and binary are in the directory "/mitoPRS/PRSice/"
 
 ## Outline & Usage
 1. Download Reference Files (1000 Genomes, and relevant variants for Principal Components based on Human Genome Diversity Project variants) from here: 
