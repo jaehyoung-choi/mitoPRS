@@ -106,7 +106,12 @@ A .csv file written to /mitoPRS/output/ containing:
 - BD_mitoPRS_prscsx (Score output from plink --score; un-normalized)
 - BD_mitoPRS_enet (Predicted probability [0, 1])
 - BD_mitoPRS_xgb (Predicted probability [0, 1])
+- SCZ_mitoPRS_prsice2
+- SCZ_mitoPRS_prscsx
+- SCZ_mitoPRS_enet
+- SCZ_mitoPRS_xgb
 - BD_mitoPRS_null (Predicted probability based on Covariate-only Logistic Regression Model)
+- SCZ_mitoPRS_null
 - PC 1-5 (First 5 PCs projected based on FRAPOSA-OADP)
   
 ## Usage
