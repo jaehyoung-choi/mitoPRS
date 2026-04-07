@@ -98,20 +98,14 @@ PRSice2 (https://github.com/choishingwan/PRSice?tab=readme-ov-file)
 ```./run_mitoprs.sh "targetprefix" "outprefix"```
 
 ## Output
-A .csv file written to /mitoPRS/output/ containing:
+Two .csv files written to /mitoPRS/output/ containing:
 - IID
 - FID
 - Phenotype Value (1 = Control, 2 = Case, -9/0 = Missing)
-- BD_mitoPRS_prsice2 (Score output from PRS-ice2; un-normalized)
-- BD_mitoPRS_prscsx (Score output from plink --score; un-normalized)
-- BD_mitoPRS_enet (Predicted probability [0, 1])
-- BD_mitoPRS_xgb (Predicted probability [0, 1])
-- SCZ_mitoPRS_prsice2
-- SCZ_mitoPRS_prscsx
-- SCZ_mitoPRS_enet
-- SCZ_mitoPRS_xgb
-- BD_mitoPRS_null (Predicted probability based on Covariate-only Logistic Regression Model)
-- SCZ_mitoPRS_null
+- {BD, SCZ}_mitoPRS_prsice2 (Score output from PRS-ice2; un-normalized)
+- {BD, SCZ}_mitoPRS_prscsx (Score output from plink --score; un-normalized)
+- {BD, SCZ}_mitoPRS_enet (Predicted probability [0, 1])
+- {BD, SCZ}_mitoPRS_xgb (Predicted probability [0, 1])
 - PC 1-5 (First 5 PCs projected based on FRAPOSA-OADP)
   
 ## Usage
