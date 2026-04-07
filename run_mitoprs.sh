@@ -25,6 +25,9 @@ mv "${target}".pcs "${target}".oadp
 rm -r "${target}"_tmp*
 rm -r "${target}"_common*
 
+#Running SCZ scoring
+./score_scz.sh "${target}" "${outpre}"
+
 ./align_to_ref.sh "${target}" "${target}"_mt "ref/combinedbdset" #$1=TargetPrefix $2=OutPrefix $3=reference bim prefix
 
 #Make sure PRSice.R is located in ./PRSice/ directory
