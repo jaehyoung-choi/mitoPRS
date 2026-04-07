@@ -98,7 +98,7 @@ PRSice2 (https://github.com/choishingwan/PRSice?tab=readme-ov-file)
 ```./run_mitoprs.sh "targetprefix" "outprefix"```
 
 ## Output
-Two .csv files written to /mitoPRS/output/ containing:
+Two {out_prefix}_{BD/SCZ}_prediction.csv files written to /mitoPRS/output/ containing:
 - IID
 - FID
 - Phenotype Value (1 = Control, 2 = Case, -9/0 = Missing)
