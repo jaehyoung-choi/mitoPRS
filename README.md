@@ -20,7 +20,7 @@ _Note: The majority of the development/discovery data is dependent on individual
 _Note: The script will automatically search for REF/ALT formats or strand-flips on variants to be used for scoring. If a variant is not found, or REF/ALT is different from the reference, or is tri-allelic, it will generate "dummy" variables as missing. The missing variables will be: [ignored for PRSice2 and PRSCSx], [Hanlded automatically in XGB], [Filled with REF/REF for OADP and ENET]_ 
 
 ### Contact
-jaehyoung.choi@mail.utoronto.ca
+jaehyoung.choi[at]mail.utoronto.ca
 
 ### References
 - FRAPOSA (https://github.com/PGScatalog/fraposa_pgsc)
