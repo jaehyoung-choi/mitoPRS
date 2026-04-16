@@ -2,7 +2,7 @@
 **Pipeline for calculation of mitoPRS for psychiatric disorders.**
 ## Description
 The provided files compute calculate mitoPRS for psychiatric disorders.
-Beta Version 1.1 (Mar 2026)
+Beta Version 1.1b (Apr 2026)
 
 Currently supported: Bipolar Disorder; Schizophrenia (updated)
 
