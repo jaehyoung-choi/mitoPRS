@@ -26,7 +26,7 @@ rm -r "${target}"_tmp*
 rm -r "${target}"_common*
 
 #Running SCZ scoring
-./score_scz.sh "${target}" "${outpre}"
+./score_scz.sh "${target}" "${outpre}_SCZ"
 
 ./align_to_ref.sh "${target}" "${target}"_mt "ref/combinedbdset" #$1=TargetPrefix $2=OutPrefix $3=reference bim prefix
 
@@ -62,7 +62,7 @@ awk '{for(i=7;i<=NF;i++) printf $i (i==NF?ORS:OFS)}' "$outpre"_enet.raw | awk 'B
 sed -n '1p' "$outpre"_enet.geno > varids_enet.names
 tail -n +2 "$outpre"_enet.geno > file.tmp && mv file.tmp "$outpre"_enet.geno
 
-python score_mitoprs.py --ext-feature "${outpre}" --ext-cov "${target}".oadp --ext-label "${outpre}".pheno --train-names "varids" --out-prefix "${outpre}_SCZ"
+python score_mitoprs.py --ext-feature "${outpre}" --ext-cov "${target}".oadp --ext-label "${outpre}".pheno --train-names "varids" --out-prefix "${outpre}"
 
 #Final Cleanup
 rm *.geno
