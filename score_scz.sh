@@ -39,7 +39,7 @@ tail -n +2 "$outpre".pheno | awk '{$1=$1}1' OFS='\t' > file.tmp && mv file.tmp "
 
 plink --bfile "${target}"_scz_mt --extract ref/scz_enet_varids.txt --keep-allele-order --recode A --out "$outpre"_scz_enet
 awk '{for(i=7;i<=NF;i++) printf $i (i==NF?ORS:OFS)}' "$outpre"_scz_enet.raw | awk 'BEGIN {OFS="\t"} {$1=$1}1' > "$outpre"_scz_enet.geno
-sed -n '1p' "$outpre"_scz_enet.geno > varids_enet.names
+sed -n '1p' "$outpre"_scz_enet.geno > scz_varids_enet.names
 tail -n +2 "$outpre"_scz_enet.geno > file.tmp && mv file.tmp "$outpre"_scz_enet.geno
 
 python score_mitoprs_scz.py --ext-feature "${outpre}"_scz --ext-cov "${target}".oadp --ext-label "${outpre}".pheno --train-names "varids" --out-prefix "${outpre}"_scz
