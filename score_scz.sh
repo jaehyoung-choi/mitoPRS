@@ -18,12 +18,13 @@ Rscript PRSice/PRSice.R \
       --prsice PRSice/PRSice_linux \
       --base ref/SCZ.mitoPRS.sumstat.postCT.txt \
       --target "${target}"_scz_mt \
+      -- \
       --binary-target T \
       --bar-levels 0.42 \
       --fastscore \
       --stat OR \
       --no-regress --no-clump --no-full \
-      --out "$outpre".scz
+      --out "$outpre"
 
 plink --bfile "${target}"_scz_mt --score ref/PRSCSx.scz.combined.txt 2 4 6 --out "$outpre".scz.csx
 
@@ -42,7 +43,7 @@ awk '{for(i=7;i<=NF;i++) printf $i (i==NF?ORS:OFS)}' "$outpre"_scz_enet.raw | aw
 sed -n '1p' "$outpre"_scz_enet.geno > scz_varids_enet.names
 tail -n +2 "$outpre"_scz_enet.geno > file.tmp && mv file.tmp "$outpre"_scz_enet.geno
 
-python score_mitoprs_scz.py --ext-feature "${outpre}"_scz --ext-cov "${target}".oadp --ext-label "${outpre}".pheno --train-names "varids" --out-prefix "${outpre}"_scz
+python score_mitoprs_scz.py --ext-feature "${outpre}"_scz --ext-cov "${target}".oadp --ext-label "${outpre}".pheno --train-names "varids" --out-prefix "${outpre}"
 
 #Cleanup for next scoring step
 rm *.geno
