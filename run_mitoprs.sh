@@ -9,6 +9,7 @@ export outpre="$2"
 export PATH="$PATH:$HOME/plink1.9/:$HOME/plink2/"
 
 cd "$(dirname "$0")"
+mkdir output
 
 ## Extracting relevant variants to project PCs using FRAPOSA;
 ## Missing Variants will be replaced with ref allele from input REF/ALT format
