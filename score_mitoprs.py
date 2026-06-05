@@ -32,7 +32,7 @@ def main():
 
     # Load Data
     X_new, y_new, full_names, identifiers = utils.load_data_split(
-        f"{args.ext_feature}_xgb.geno", args.ext_cov, f"{args.train_names}_xgb.names", args.ext_label
+        f"{args.ext_feature}_xgb.geno", args.ext_cov, f"scz_xgb_{args.train_names}.names", args.ext_label
     )
 
     # Load Models
@@ -49,7 +49,7 @@ def main():
 
     # Elastic Net (using np.float32 for input, filling NA with median of each column)
     X_new, y_new, full_names, identifiers = utils.load_data_split(
-        f"{args.ext_feature}_enet.geno", args.ext_cov, f"{args.train_names}_enet.names", args.ext_label
+        f"{args.ext_feature}_enet.geno", args.ext_cov, f"scz_enet_{args.train_names}.names", args.ext_label
     )
     X_new.columns = full_names
     X_new = X_new.fillna(X_new.median())
