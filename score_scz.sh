@@ -18,9 +18,6 @@ Rscript PRSice/PRSice.R \
       --prsice PRSice/PRSice_linux \
       --base ref/SCZ.mitoPRS.sumstat.postCT.txt \
       --target "${target}"_scz_mt \
-      --bp BP \
-      --chr CHR \
-      --pvalue P \
       --binary-target T \
       --bar-levels 0.42 \
       --fastscore \
