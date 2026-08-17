@@ -26,7 +26,7 @@ Rscript PRSice/PRSice.R \
       --fastscore \
       --stat OR \
       --no-regress --no-clump --no-full \
-      --out "$outpre"
+      --out "$outpre".scz
 
 plink --bfile "${target}"_scz_mt --score ref/PRSCSx.scz.combined.txt 2 4 6 --out "$outpre".scz.csx
 
